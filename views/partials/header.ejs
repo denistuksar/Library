@@ -1,19 +1,50 @@
 <header>
-    <nav>
-        <a href="/">Library</a>
-        <ul>
-            <li>
-                <a href="/authors">Authors</a>
-            </li>
-            <li>
-                <a href="/authors/new">Add Author</a>
-            </li>
-            <li>
+    <nav class="header-nav">
+        <a class="header-title" href="/">Library</a>
+        <div id="links">
+            <ul>
+                <li>
+                    <a href="/authors">Authors</a>
+                </li>
+                <li>
+                    <a href="/authors/new">Add Author</a>
+                </li>
+                <li>
                     <a href="/books">Books</a>
                 </li>
                 <li>
                     <a href="/books/new">Add Book</a>
                 </li>
-        </ul>
+            </ul>
+        </div>
+        <a href="javascript:void(0);" class="icon" onclick="navBarToggle()">
+            <i id="icon" class="fa fa-bars"></i>
+        </a>
     </nav>
 </header>
+<script>
+    window.onresize = reportWindowSize;
+
+    function reportWindowSize() {
+        let x = document.getElementById("links");
+        document.getElementById("icon").className = "fa fa-bars";
+        if (window.innerWidth > 824) {
+            x.style.display = "flex";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    function navBarToggle() {
+        let x = document.getElementById("links");
+        let i = document.getElementById("icon");
+        if (x.style.display === "block") {
+            document.getElementById("icon").className = "fa fa-bars";
+            x.style.display="none";
+        } else {
+            x.style.display = "block";
+            document.getElementById("icon").className = "fa fa-times";
+            document.getElementById("links").className = "fadeIn";
+        }
+    }
+</script>

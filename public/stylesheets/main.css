@@ -1,0 +1,35 @@
+@import 'shared/variables.css';
+@import 'shared/header.css';
+@import 'shared/buttons.css';
+
+:root {
+    font-family: 'Helvetica', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    color: var(--color-text-light)
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+ 
+
+body {
+    background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 3rem;
+}
+
+.inner-container{
+    margin: 0 2rem;
+}
+
+.page-header{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: serif, 'Courier New', Courier, monospace;
+    letter-spacing: 3px;
+}
