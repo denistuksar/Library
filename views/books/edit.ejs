@@ -3,8 +3,8 @@
 </h2>
 <form action="/books/<%= book.id %>?_method=PUT" method="POST">
     <%- include('_form_fields') %>
-    <a href="/book/<%= book.id %>">Cancel</a>
-    <button type="submit">
+    <a class="btn btn-danger" href="/books">Cancel</a>
+    <button class="btn btn-primary" type="submit">
         Update
     </button>
 </form>

@@ -1,6 +1,8 @@
 @import 'shared/variables.css';
 @import 'shared/header.css';
 @import 'shared/buttons.css';
+@import 'shared/form.css';
+
 
 :root {
     font-family: 'Helvetica', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -28,8 +30,27 @@ body {
 }
 
 .page-header{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 400;
     font-family: serif, 'Courier New', Courier, monospace;
     letter-spacing: 3px;
+    display: flex;
+    justify-content: center;
+    font-family: 'Helvetica', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.bookImage{
+    height: 10rem;
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    margin:1rem;
+    margin-left: 0;
+}
+
+.bookImage:hover{
+    transform: scale(1.1);
+}
+
+a{
+    text-decoration: none;
 }

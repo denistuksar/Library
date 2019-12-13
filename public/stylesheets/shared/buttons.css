@@ -9,15 +9,27 @@
     text-transform: uppercase;
     color: black;
     background-color: rgb(255, 255, 255, 94%)
+
 }
 
-.btn:hover{
+.btn-danger{
+    background-color: rgba(238, 87, 87, 0.8);
+    color: white;
+}
+
+.btn-danger:hover{
+    background-color: rgba(238, 87, 87, 0.9);
+    color: white;
+}
+
+.btn-primary:hover{
     background-color: white;
 }
 
 .btn-row{
     display:flex;
     align-items: flex-start;
+    margin-bottom: 1rem;
 }
 
 .btn-row > *{
@@ -27,3 +39,4 @@
 .btn-row > *:first-child{
     margin-left:0;
 }
+
