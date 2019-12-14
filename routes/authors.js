@@ -12,7 +12,9 @@ router.get('/', async (req, res) => {
     try {
         const authors = await Author.find(
             searchOptions
-        );
+        ).sort({
+            "name": 1
+        });
         res.render('authors/index', {
             authors: authors,
             searchOptions: req.query
@@ -48,9 +50,11 @@ router.post('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const author = await Author.findById(req.params.id);
-        const books  = await Book.find({author: author.id}).limit(6).exec();
+        const books = await Book.find({
+            author: author.id
+        }).limit(6).exec();
         res.render('authors/show', {
-            author:author,
+            author: author,
             booksByAuthor: books
         })
     } catch {

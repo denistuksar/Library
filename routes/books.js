@@ -22,7 +22,8 @@ router.get('/', async (req, res) => {
             books: books,
             searchOptions: req.query
         })
-    } catch {
+    } catch(err) {
+        console.log(err);
         res.redirect('/')
     }
 });
@@ -102,14 +103,14 @@ router.delete('/:id', async (req, res) => {
     let book;
     try {
         book = await Book.findByIdAndRemove(req.params.id);
-        res.redirect('/books');        
+        res.redirect('/books');
     } catch {
         if (book != null) {
             res.render('books/show', {
                 book: book,
                 errorMessage: 'Could not remove book'
             })
-        } else {
+        } else {
             res.redirect('/');
         }
     }
