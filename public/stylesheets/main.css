@@ -41,7 +41,7 @@ body {
 }
 
 .bookImage{
-    height: 10rem;
+    height: 13rem;
     width: auto;
     transition: all .2s ease-in-out;
     text-decoration: none;
