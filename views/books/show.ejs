@@ -1,13 +1,20 @@
 <h2 class="page-header"><%= book.title %></h2>
-<img height="200" src="<%= book.coverImagePath %>">
-<div class="form-column"> Author: <%= book.author.name %> </div>
-<div class="form-column"> Page Count: <%= book.pageCount %> </div>
-<div class="form-column"> Publish Date: <%= book.publishDate.toDateString() %> </div>
-<div class="form-column"> Description: <%= book.description %> </div>
+<div class="indexImages">
+        <img height="200" src="<%= book.coverImagePath %>">
+</div>
+<br>
+<div class="form-column category"> Author: </div>
+<div class="form-column"><%= book.author.name %> </div>
+<div class="form-column category"> Page Count: </div>
+<div class="form-column"><%= book.pageCount %> </div>
+<div class="form-column category"> Publish Date: </div>
+<div class="form-column"> <%= book.publishDate.toDateString() %> </div>
+<div class="form-column category"> Description: </div>
+<div class="form-column"> <%= book.description %> </div>
+
 <br>
 <div class="btn-row">
         <a class="btn btn-primary"  href="/authors/<%=book.author.id%>">View Author</a> 
         <a class="btn btn-primary" href="/books/<%=book.id%>/edit">Edit</a>
         <%- include('../partials/deleteForm', {url: `/books/${book.id}`})%>
-
 </div>
