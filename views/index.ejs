@@ -1,6 +1,6 @@
 <h2 class="page-header">Recently Added </h2>
 <div class="indexImages">
-    <% books.forEach(book => { %>
+    <% books.slice(-5).forEach(book => { %>
     <a href="/books/<%= book.id %>">
         <img class="bookImage" src="<%= book.coverImagePath %>">
     </a>
